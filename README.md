@@ -55,7 +55,7 @@ You need to specify both even if you don't use grafana nor influxdb. You can loo
 Playbooks are divided to provide easier management. You can choose from:
 
 - [`site.yml`](site.yml) - deploy everything, same site as this one
-- [`metrics.yml`](metrics.yml) - metrics monitoring - prometheus, node_exporters, alertmanager, and grafana
+- [`metrics.yml`](metrics.yml) - metrics monitoring - prometheus, alertmanager, grafana, and exporters
 - [`logs.yml`](logs.yml) - logging stack based on fluentd
 - [`extras.yml`](extras.yml) - everything else needed to set up this site - python, docker, caddy, influxdb
 
