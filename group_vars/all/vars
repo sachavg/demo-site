@@ -158,3 +158,6 @@ grafana_dashboards:
   - dashboard_id: '4271'
     revision_id: '3'
     datasource: '{{ grafana_datasources.0.name }}'
+  - dashboard_id: '3522'
+    revision_id: '1'
+    datasource: '{{ grafana_datasources.0.name }}'
