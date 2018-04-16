@@ -50,6 +50,15 @@ vault_influxdb_password <<INSERT_YOUR_INFLUXDB_PASSWORD>>
 
 You need to specify both even if you don't use grafana nor influxdb. You can look over [`group_vars/all/vault`](group_vars/all/vars) to find why.
 
+#### Run playbook
+
+Playbooks are divided to provide easier management. You can choose from:
+
+- [`site.yml`](site.yml) - deploy everything, same site as this one
+- [`metrics.yml`](metrics.yml) - metrics monitoring - prometheus, node_exporters, alertmanager, and grafana
+- [`logs.yml`](logs.yml) - logging stack based on fluentd
+- [`extras.yml`](extras.yml) - everything else needed to set up this site - python, docker, caddy, influxdb
+
 # 
 
 [![DigitalOcean](https://snapshooter.io/powered_by_digital_ocean.png)](https://digitalocean.com)

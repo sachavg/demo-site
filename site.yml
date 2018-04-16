@@ -1,23 +1,7 @@
-- name: Deploy node_exporter
-  hosts: all
-  roles:
-    - cloudalchemy.node-exporter
-  tags:
-    - node_exporter
+---
 
-- name: Setup core monitoring software
-  hosts: prometheus
-  roles:
-    - cloudalchemy.blackbox-exporter
-    - cloudalchemy.snmp-exporter
-    - cloudalchemy.prometheus
-    - cloudalchemy.alertmanager
-  tags:
-    - prometheus
+- include: extras.yml
 
-- name: Deploy grafana
-  hosts: grafana
-  roles:
-    - cloudalchemy.grafana
-  tags:
-    - grafana
+- include: metrics.yml
+
+- include: logs.yml
